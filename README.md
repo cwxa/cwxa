@@ -6,14 +6,16 @@
   <a href="https://github.com/cwxa?tab=repositories">全部项目</a>
 </p>
 
-## 你好，我是 cwxa 👋
+<p align="center"><code>REINFORCEMENT LEARNING</code> · <code>MULTI-OBJECTIVE OPTIMIZATION</code> · <code>SOFTWARE ENGINEERING</code></p>
+
+## `01` / 关于我
 
 关注**智能优化、机器学习与软件开发**，探索算法如何解决实际问题。
 从调度算法的复现与实验分析，到面向日常使用的应用开发，我重视实现的可维护性、实验的可复现性，以及结果的清晰表达。
 
-## 精选项目
+## `02` / 精选项目
 
-### 🧠 [RMOEA_D · 强化学习与多目标调度优化](https://github.com/cwxa/RMOEA_D)
+[![RMOEA_D — 强化学习与多目标调度优化](assets/rmoead-card.svg)](https://github.com/cwxa/RMOEA_D)
 
 面向**双目标模糊柔性作业车间调度**的 Python 求解器，复现论文 *A reinforcement learning based RMOEA/D for bi-objective fuzzy flexible job shop scheduling* 的核心算法，同时优化模糊最大完工时间与总机器工作负载。
 
@@ -23,13 +25,13 @@
 
 [项目说明](https://github.com/cwxa/RMOEA_D/blob/main/readme.md) · [论文与复现对照](https://github.com/cwxa/RMOEA_D/blob/main/docs/paper-vs-reproduction.md) · [实现一致性核对](https://github.com/cwxa/RMOEA_D/blob/main/docs/paper-implementation-conformance.md)
 
-### 🖥️ [NeckGuardian · 肩颈健康助手](https://github.com/cwxa/HealthyDesk)
+[![NeckGuardian — 肩颈健康助手](assets/neckguardian-card.svg)](https://github.com/cwxa/HealthyDesk)
 
 将姿势监测与活动提醒融入日常工作：通过摄像头检测坐姿、记录健康数据，并提醒适时活动。**摄像头画面在本机处理**，兼顾实用体验与隐私。
 
 [使用说明](https://github.com/cwxa/HealthyDesk#readme) · [下载安装](https://github.com/cwxa/HealthyDesk/releases) · [问题反馈](https://github.com/cwxa/HealthyDesk/issues)
 
-## 技术关注
+## `03` / 技术关注
 
 | 方向 | 关注内容 |
 | :--- | :--- |
@@ -37,7 +39,7 @@
 | **软件工程** | 模块设计、可维护代码、日志追踪与性能分析 |
 | **数据库与数据处理** | SQL 优化、索引设计、批量查询与数据处理 |
 
-## 学习与实践
+## `04` / 学习与实践
 
 - [研究生知识预备与实践](https://github.com/cwxa/postgraduate_preparation)：整理知识预备内容，并通过 demo 加深理解。
 - [SchedulingProblem](https://github.com/cwxa/SchedulingProblem)：Python 调度问题实践。

@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="235" viewBox="0 0 720 235" role="img" aria-labelledby="title"><title id="title">NeckGuardian project</title>
+<rect x="1" y="1" width="718" height="233" rx="14" fill="#0b1020" stroke="#334155"/>
+<path d="M24 1H150" stroke="#a78bfa" stroke-width="3"/>
+<g font-family="Consolas,monospace"><text x="32" y="39" fill="#a78bfa" font-size="13" letter-spacing="3">02 / APPLICATION</text><text x="30" y="93" fill="#f1f5f9" font-size="42" font-weight="700">NeckGuardian</text><text x="32" y="130" fill="#a78bfa" font-size="14">POSTURE MONITORING · LOCAL PROCESSING</text><text x="32" y="159" fill="#94a3b8" font-size="15">Camera-based feedback for everyday work</text><path d="M32 181H688" stroke="#253047"/><text x="32" y="210" fill="#94a3b8" font-size="12">POSTURE / REMINDERS / HEALTH RECORDS</text><text x="659" y="46" fill="#a78bfa" font-size="24">↗</text></g></svg>

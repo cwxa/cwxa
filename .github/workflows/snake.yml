@@ -1,0 +1,60 @@
+name: Generate contribution snake
+on:
+  schedule:
+    # 每天北京时间 09:00 更新贡献图动画。
+    - cron: '0 1 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/snake.yml']
+permissions:
+  contents: write
+concurrency:
+  group: contribution-snake
+  cancel-in-progress: false
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Generate light and dark contribution snakes
+        uses: Platane/snk/svg-only@d8f6715049803e982ee5ff501b6b9b7d5deeb09b # v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/github-snake.svg?color_snake=#7c3aed&color_dots=#ebedf0,#a5f3fc,#67e8f9,#22d3ee,#0891b2
+            dist/github-snake-dark.svg?palette=github-dark&color_snake=#a78bfa&color_dots=#161b22,#164e63,#0e7490,#06b6d4,#67e8f9
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Publish generated animations
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -s dist/github-snake.svg
+          test -s dist/github-snake-dark.svg
+          echo "Generated both contribution snake animations."
+          publish_dir="${RUNNER_TEMP}/snake-publish"
+          mkdir -p "$publish_dir"
+          cd "$publish_dir"
+          git init -b output
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git remote add origin "https://github.com/${GITHUB_REPOSITORY}.git"
+          auth_header=$(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)
+          git config http.https://github.com/.extraheader "AUTHORIZATION: basic ${auth_header}"
+          if git ls-remote --exit-code --heads origin output > /dev/null 2>&1; then
+            git fetch --depth=1 origin output
+            git reset --hard FETCH_HEAD
+          fi
+          cp "${GITHUB_WORKSPACE}/dist/"*.svg .
+          git add github-snake.svg github-snake-dark.svg
+          if git diff --cached --quiet; then
+            echo "Contribution animations are unchanged."
+          else
+            git commit -m "Update contribution snake animations"
+            git push origin HEAD:output
+            echo "Published contribution animations to output branch."
+          fi
+

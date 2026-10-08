@@ -8,6 +8,10 @@
 
 <p align="center"><code>REINFORCEMENT LEARNING</code> · <code>MULTI-OBJECTIVE OPTIMIZATION</code> · <code>SOFTWARE ENGINEERING</code></p>
 
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&amp;size=22&amp;duration=2800&amp;pause=1200&amp;color=22D3EE&amp;center=true&amp;vCenter=true&amp;width=760&amp;height=55&amp;lines=Exploring+Reinforcement+Learning;Solving+Multi-Objective+Scheduling;Building+Useful+Software" alt="循环打字：强化学习探索、多目标调度优化与实用软件开发" />
+</p>
+
 ## `01` / 关于我
 
 关注**智能优化、机器学习与软件开发**，探索算法如何解决实际问题。
@@ -55,6 +59,18 @@
 - [eino-examples](https://github.com/cwxa/eino-examples)：Eino 框架示例。
 
 </details>
+
+## `05` / 贡献轨迹 🐍
+
+<p align="center">让每一次提交，都成为前进的一格。</p>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/cwxa/cwxa/output/github-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/cwxa/cwxa/output/github-snake.svg" />
+  <img alt="贪吃蛇沿着 cwxa 的 GitHub 贡献图移动，逐格吃掉贡献方块" src="https://raw.githubusercontent.com/cwxa/cwxa/output/github-snake.svg" width="100%" />
+</picture>
+
+<p align="center"><sub>每日自动更新 · 根据 GitHub 主题切换配色</sub></p>
 
 ---
 
